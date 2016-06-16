@@ -33,23 +33,23 @@ public class WordStats {
         for (Map.Entry<String, Integer> entry : wordMap.entrySet()) {
             ls.add(entry.getValue() + " " + entry.getKey());
         }
-        Collections.sort(ls);
-//        ls.sort(new Comparator<String>() {
-//            @Override
-//            public int compare(String o1, String o2) {
-//                String a = o1.substring(0);
-//                String b = o2.substring(0);
-//                int compare = a.compareTo(b);
-//                if(compare == 0){
-//                    return 0;
-//                } else if (compare < 0){
-//                    return -1;
-//                } else {
-//                    return 1;
-//                }
-//
-//            }
-//        });
+//        Collections.sort(ls);
+        ls.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                int a = Integer.parseInt(o1.substring(0, o1.indexOf(" ")));
+                int b = Integer.parseInt(o2.substring(0, o2.indexOf(" ")));
+                //int compare = a.compareTo(b);
+                if(a == b){
+                    return 0;
+                } else if (a < b){
+                    return -1;
+                } else {
+                    return 1;
+                }
+
+            }
+        });
         for (String part : ls) {
             System.out.println(part);
 

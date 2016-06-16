@@ -19,9 +19,21 @@ public class Main {
         testAL.add("four");
         testAL.add("five");
         testAL.add("five");
+        testAL.add("five");
+        testAL.add("five");
+        testAL.add("five");
+        testAL.add("five");
+        testAL.add("five");
+        testAL.add("five");
+        testAL.add("five");
+        testAL.add("five");
+        testAL.add("five");
+        testAL.add("five");
 
         Iterator<String> iter = testAL.iterator();
         ws.process(iter);
+
+
 
     }
 }
